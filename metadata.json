@@ -1,0 +1,6 @@
+{
+  "name": "CodeWeaver AI",
+  "description": "An AI-powered DevSecOps platform built with React, Tailwind CSS, and Google Gemini. It assists developers in coding, analysis, debugging, and CI/CD generation, inspired by the original CodeWeaver AI concept.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

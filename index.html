@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeWeaver AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Keep 'class' to easily target .dark
+        theme: {
+          extend: {
+            colors: {
+              dark: {
+                bg: '#2b2b2b',
+                fg: '#f0f0f0',
+                input_bg: '#3c3f41',
+                text_bg: '#2b2b2b', // Matched to bg for consistency in some areas
+                accent: '#4285F4', // Brighter blue for primary actions
+                accent_active: '#5e97f6', // Slightly lighter for hover/active
+                accent_fg: '#ffffff', // Text on accent
+                disabled_bg: '#3c3f41',
+                disabled_fg: '#888888',
+                select_bg: '#4a4d4f', // For dropdowns, selected items
+                terminal_bg: '#1e1e1e', // Very dark for terminal-like areas
+                terminal_fg: '#e0e0e0',
+                change_bg: 'rgba(87, 53, 53, 0.5)', // Softer red for diffs
+                link_fg: '#82aaff', // Standout color for links
+                border: '#4f4f4f', // Borders for elements
+              }
+              // Light theme removed
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.1",
+    "diff": "https://esm.sh/diff@^8.0.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

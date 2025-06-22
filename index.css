@@ -1,0 +1,39 @@
+
+/* Apply base styling for dark mode */
+body {
+  @apply bg-dark-bg text-dark-fg transition-colors duration-300;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-dark-input_bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-select_bg;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-accent;
+}
+
+/* For Firefox - always use dark theme variables */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4d4f #3c3f41; /* dark.select_bg dark.input_bg */
+}
+
+/* Ensure html tag has dark class by default if not set by JS early enough */
+html:not(.dark) {
+   --thumb-color: #4a4d4f;
+   --track-color: #3c3f41;
+}
+
+html.dark {
+  --thumb-color: #4a4d4f; /* dark.select_bg */
+  --track-color: #3c3f41; /* dark.input_bg */
+}
